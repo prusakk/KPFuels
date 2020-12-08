@@ -1,10 +1,10 @@
 #' Funckja oblicza emisję splin dla wybranej kategorii oraz standardu
 #'
 #' @param dane dataframe
-#' @param kategoria string
-#' @param euro string
-#' @param mode string
-#' @param substancja string
+#' @param kategoria character
+#' @param euro character
+#' @param mode character
+#' @param substancja character
 #'
 #' @return dataframe
 #'
