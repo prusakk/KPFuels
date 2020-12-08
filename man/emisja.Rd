@@ -9,13 +9,13 @@ emisja(dane, kategoria, euro, mode, substancja)
 \arguments{
 \item{dane}{dataframe}
 
-\item{kategoria}{string}
+\item{kategoria}{character}
 
-\item{euro}{string}
+\item{euro}{character}
 
-\item{mode}{string}
+\item{mode}{character}
 
-\item{substancja}{string}
+\item{substancja}{character}
 }
 \value{
 dataframe
