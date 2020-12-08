@@ -1,15 +1,17 @@
-#' Funckja oblicza emisję dla wybranej kategorii oraz standardu
+#' Funckja oblicza emisję splin dla wybranej kategorii oraz standardu
 #'
-#' @param dane data.frame
+#' @param dane dataframe
 #' @param kategoria string
 #' @param euro string
-#' @param mode String
+#' @param mode string
 #' @param substancja string
 #'
-#' @return data.frame
+#' @return dataframe
 #'
 #' @examples
 #' emisja(input, 'Passenger Cars', 'Euro 5', '', 'CO')
+#'
+#' @import dplyr
 #' @export
 #'
 
