@@ -1,10 +1,10 @@
 #' Funckja oblicza emisję dla wybranej kategorii oraz standardu
 #'
 #' @param dane data.frame
-#' @param kategoria character
-#' @param euro character
-#' @param mode character
-#' @param substancja character
+#' @param kategoria string
+#' @param euro string
+#' @param mode String
+#' @param substancja string
 #'
 #' @return data.frame
 #'
