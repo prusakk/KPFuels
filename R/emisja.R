@@ -29,6 +29,8 @@ emisja <- function(dane, kategoria, euro, mode, substancja) {
     ) %>%
     select(Category, Fuel, Euro.Standard, Technology, Pollutant, Mode, Segment, Nat, Emisja)
 
+  out[!duplicated(out), ] -> out
+
   return(out)
 
 }
