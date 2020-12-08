@@ -17,7 +17,7 @@
 
 emisja <- function(dane, kategoria, euro, mode, substancja) {
 
-  out <- wskazniki %>%
+  out <- dane %>%
     filter(Category %in% kategoria) %>%
     filter(Euro.Standard %in% euro) %>%
     filter(Pollutant %in% substancja) %>%

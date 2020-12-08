@@ -2,27 +2,28 @@
 % Please edit documentation in R/emisja.R
 \name{emisja}
 \alias{emisja}
-\title{Funckja oblicza emisję dla wybranej kategorii oraz standardu}
+\title{Funckja oblicza emisję splin dla wybranej kategorii oraz standardu}
 \usage{
 emisja(dane, kategoria, euro, mode, substancja)
 }
 \arguments{
-\item{dane}{data.frame}
+\item{dane}{dataframe}
 
 \item{kategoria}{string}
 
 \item{euro}{string}
 
-\item{mode}{String}
+\item{mode}{string}
 
 \item{substancja}{string}
 }
 \value{
-data.frame
+dataframe
 }
 \description{
-Funckja oblicza emisję dla wybranej kategorii oraz standardu
+Funckja oblicza emisję splin dla wybranej kategorii oraz standardu
 }
 \examples{
 emisja(input, 'Passenger Cars', 'Euro 5', '', 'CO')
+
 }
