@@ -1,3 +1,18 @@
+#' Funckja oblicza emisję dla wybranej kategorii oraz standardu
+#'
+#' @param dane data.frame
+#' @param kategoria character
+#' @param euro character
+#' @param mode character
+#' @param substancja character
+#'
+#' @return data.frame
+#'
+#' @examples
+#' emisja(input, 'Passenger Cars', 'Euro 5', '', 'CO')
+#' @export
+#'
+
 emisja <- function(dane, kategoria, euro, mode, substancja) {
 
   out <- wskazniki %>%
