@@ -3,6 +3,7 @@ Type: Package
 Title: Obliczanie emisji i rysowanie wykresów
 Version: 0.1.0
 Author: Krzysztof Prusak <prusakk@student.agh.edu.pl>
+Maintainer: Krzysztof Prusak <prusakk@student.agh.edu.pl>
 Description: Co ten pakiet robi?
 License: MIT + file LICENSE
 Encoding: UTF-8
