@@ -126,3 +126,32 @@ datatable(wynik)
 ```
 
 Druga funkcja - `emisja_plot()` - zawarta w pakiecie to funkcja generująca wykres przy pomocy pakietu `plotly`
+
+Jako orgumenty funkcja przymuje dane wejściowe oraz typ wykresu, do wyboru dotępny jest wykres słupkowy - `bar` - oraz punktowy - `scatter`
+```{r message=FALSE, warning=FALSE}
+
+emisja_plot(wynik, "bar")
+
+```
+
+## 2.4. Przykład
+
+```{r}
+wynik <- emisja(dane = input,
+                kategoria = "Passenger Cars",
+                euro = c("Euro 6 2017-2019", "Euro 6 2020+"),
+                mode = "",
+                substancja = c("NOx", "CO", "EC"))
+```
+
+```{r echo=FALSE}
+datatable(wynik)
+```
+
+```{r message=FALSE, warning=FALSE}
+
+emisja_plot(wynik, "bar")
+emisja_plot(wynik, "scatter")
+```
+
+***Powodzenia w pracy z pakietem***
