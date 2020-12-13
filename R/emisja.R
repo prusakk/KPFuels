@@ -19,7 +19,7 @@
 #' @param kategoria = "Passanger Cars"
 #' @param euro = "Euro IV"
 #' @param mode = ""
-#' @param Pollutant = "CO"
+#' @param substancja = "CO"
 #'
 #' @examples
 #' Obliczanie emisji dla wartości domyślych
