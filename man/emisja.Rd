@@ -2,28 +2,40 @@
 % Please edit documentation in R/emisja.R
 \name{emisja}
 \alias{emisja}
-\title{Funckja oblicza emisję splin dla wybranej kategorii oraz standardu}
+\title{Funckja do obliczania genrowanych emisji przez pojazdy spalinowe}
 \usage{
-emisja(dane, kategoria, euro, mode, substancja)
+emisja(
+  dane = input,
+  kategoria = "Passanger Cars",
+  euro = "Euro 4",
+  mode = "",
+  substancja = "CO"
+)
 }
 \arguments{
-\item{dane}{dataframe}
+\item{dane}{= input}
 
-\item{kategoria}{character}
+\item{kategoria}{= "Passanger Cars"}
 
-\item{euro}{character}
+\item{euro}{= "Euro IV"}
 
-\item{mode}{character}
+\item{mode}{= ""}
 
-\item{substancja}{character}
+\item{substancja}{character - nazwa substacji emisyjnej np. CH4, N2O}
+
+\item{Pollutant}{= "CO"}
 }
 \value{
 dataframe
 }
 \description{
-Funckja oblicza emisję splin dla wybranej kategorii oraz standardu
+Funckja do obliczania genrowanych emisji przez pojazdy spalinowe
 }
-\examples{
-emisja(input, 'Passenger Cars', 'Euro 5', '', 'CO')
+\details{
+Wzór wykorzystywany do obliczenia emsji
 
+(Alpha x Procent^2 + Beta x Procent + Gamma + (Delta/Procent)/
+(Epsilon x Procent^2 + Zita x Procent + Hta) x (1-Reduction)
+
+Wartości domyślne funkcji
 }

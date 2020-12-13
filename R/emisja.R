@@ -8,29 +8,30 @@
 #'
 #' @return dataframe
 #'
-#' Wzór wykorzystywany do obliczenia emsji
+#' @details Wzór wykorzystywany do obliczenia emsji
 #'
 #' (Alpha x Procent^2 + Beta x Procent + Gamma + (Delta/Procent)/
 #' (Epsilon x Procent^2 + Zita x Procent + Hta) x (1-Reduction)
 #'
 #' Wartości domyślne funkcji
 #'
-#' dane = input
-#' kategoria = "Passanger Cars"
-#' euro = "Euro IV"
-#' mode = ""
-#' Pollutant = "CO"
+#' @param dane = input
+#' @param kategoria = "Passanger Cars"
+#' @param euro = "Euro IV"
+#' @param mode = ""
+#' @param Pollutant = "CO"
 #'
 #' @examples
 #' Obliczanie emisji dla wartości domyślych
+#'
+#' \dontrun{
 #' emisja()
 #'
 #' emisja(input, 'Heavy Duty Trucks', 'Euro IV', '', 'NOx')
 #'
 #' @import dplyr
 #' @export
-
-wskazniki
+#' }
 
 emisja <- function(dane = input,
                    kategoria = "Passanger Cars",
@@ -44,7 +45,7 @@ emisja <- function(dane = input,
     filter(Pollutant %in% substancja) %>%
     filter(Mode %in% mode)
 
-  out <- inner_join(x = out, y = input, by = "Segment")
+  out <- inner_join(x = out, y = input, by = c("Segment", "Fuel", "Technology"))
 
   out <- out %>%
     mutate(Emisja = Nat * ((Alpha * Procent ^ 2 + Beta * Procent + Gamma + (Delta/Procent))/
