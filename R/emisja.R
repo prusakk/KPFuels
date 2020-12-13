@@ -10,16 +10,16 @@
 #'
 #' Wzór wykorzystywany do obliczenia emsji
 #'
-#' ((Alpha * Procent ^ 2 + Beta * Procent + Gamma + (Delta/Procent))/
-#' (Epsilon * Procent ^ 2 + Zita * Procent + Hta) * (1-Reduction))
+#' (Alpha x Procent^2 + Beta x Procent + Gamma + (Delta/Procent)/
+#' (Epsilon x Procent^2 + Zita x Procent + Hta) x (1-Reduction)
 #'
 #' Wartości domyślne funkcji
 #'
-#' @param dane = input
-#' @param kategoria = "Passanger Cars"
-#' @param euro = "Euro IV"
-#' @param mode = ""
-#' @param Pollutant = "CO"
+#' dane = input
+#' kategoria = "Passanger Cars"
+#' euro = "Euro IV"
+#' mode = ""
+#' Pollutant = "CO"
 #'
 #' @examples
 #' Obliczanie emisji dla wartości domyślych
@@ -29,7 +29,6 @@
 #'
 #' @import dplyr
 #' @export
-#'
 
 wskazniki
 
