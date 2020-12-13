@@ -17,7 +17,6 @@
 #' (Epsilon x Procent^2 + Zita x Procent + Hta) x (1-Reduction)
 #'
 
-
 emisja <- function(dane = input,
                    kategoria = "Passanger Cars",
                    euro = "Euro 4",
@@ -30,7 +29,7 @@ emisja <- function(dane = input,
     filter(Pollutant %in% substancja) %>%
     filter(Mode %in% mode)
 
-  out <- inner_join(x = out, y = input, by = c("Segment", "Paliwo", "Technologia"))
+  out <- inner_join(x = out, y = input, by = c("Segment", "Fuel", "Technology"))
 
   out <- out %>%
     mutate(Emisja = Nat * ((Alpha * Procent ^ 2 + Beta * Procent + Gamma + (Delta/Procent))/

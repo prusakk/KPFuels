@@ -4,8 +4,8 @@
 #' \describe{
 #'  \item{Nat}{numeric, zawiera informacje o typie samochody np. Passenger Cars}
 #'  \item{Segment}{character, klasa samochodu np. mini}
-#'  \item{Paliwo}{character, rodzaj paliwa, np. petrol}
-#'  \item{Technologia}{character, technologia użyta w silniku np. GDI}
+#'  \item{Fuel}{character, rodzaj paliwa, np. petrol}
+#'  \item{Technology}{character, technologia użyta w silniku np. GDI}
 #' }
 #' @examples
 #' \dontrun{
