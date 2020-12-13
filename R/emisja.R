@@ -1,21 +1,43 @@
-#' Funckja oblicza emisję splin dla wybranej kategorii oraz standardu
+#' Funckja do obliczania genrowanych emisji przez pojazdy spalinowe
 #'
-#' @param dane dataframe
-#' @param kategoria character
-#' @param euro character
-#' @param mode character
-#' @param substancja character
+#' @param dane dataframe - dane wejściowe
+#' @param kategoria character - kategoria pojazdu np. Passenger Cars, Heavy Duty Trucks itd.
+#' @param euro character - norma emisji spalin np. Euro II, Euro III itd.
+#' @param mode character - tryb jazdy pojazdu np. Highway, Urban Peak itd.
+#' @param substancja character - nazwa substacji emisyjnej np. CH4, N2O
 #'
 #' @return dataframe
 #'
+#' Wzór wykorzystywany do obliczenia emsji
+#'
+#' ((Alpha * Procent ^ 2 + Beta * Procent + Gamma + (Delta/Procent))/
+#' (Epsilon * Procent ^ 2 + Zita * Procent + Hta) * (1-Reduction))
+#'
+#' Wartości domyślne funkcji
+#'
+#' @param dane = input
+#' @param kategoria = "Passanger Cars"
+#' @param euro = "Euro IV"
+#' @param mode = ""
+#' @param Pollutant = "CO"
+#'
 #' @examples
-#' emisja(input, 'Passenger Cars', 'Euro 5', '', 'CO')
+#' Obliczanie emisji dla wartości domyślych
+#' emisja()
+#'
+#' emisja(input, 'Heavy Duty Trucks', 'Euro IV', '', 'NOx')
 #'
 #' @import dplyr
 #' @export
 #'
 
-emisja <- function(dane, kategoria, euro, mode, substancja) {
+wskazniki
+
+emisja <- function(dane = input,
+                   kategoria = "Passanger Cars",
+                   euro = "Euro 4",
+                   mode = "",
+                   substancja = "CO") {
 
   out <- wskazniki %>%
     filter(Category %in% kategoria) %>%
