@@ -16,22 +16,6 @@
 #' (Alpha x Procent^2 + Beta x Procent + Gamma + (Delta/Procent)/
 #' (Epsilon x Procent^2 + Zita x Procent + Hta) x (1-Reduction)
 #'
-#' Wartości domyślne funkcji
-#'
-#' @param dane =    input
-#' @param kategoria =    "Passanger Cars"
-#' @param euro =    "Euro IV"
-#' @param mode =    ""
-#' @param substancja =    "CO"
-#'
-#'\dontrun{
-#' @examples
-#' Obliczanie emisji dla wartości domyślych
-#'
-#' emisja()
-#'
-#' emisja(input, 'Heavy Duty Trucks', 'Euro IV', '', 'NOx')
-#'}
 
 
 emisja <- function(dane = input,

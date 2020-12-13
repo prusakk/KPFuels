@@ -13,13 +13,13 @@ emisja(
 )
 }
 \arguments{
-\item{dane}{=    input}
+\item{dane}{dataframe - dane wejściowe}
 
-\item{kategoria}{=    "Passanger Cars"}
+\item{kategoria}{character - kategoria pojazdu np. Passenger Cars, Heavy Duty Trucks itd.}
 
-\item{euro}{=    "Euro IV"}
+\item{euro}{character - norma emisji spalin np. Euro II, Euro III itd.}
 
-\item{mode}{=    ""}
+\item{mode}{character - tryb jazdy pojazdu np. Highway, Urban Peak itd.}
 
 \item{substancja}{character - nazwa substacji emisyjnej np. CH4, N2O}
 }
@@ -34,6 +34,4 @@ Wzór wykorzystywany do obliczenia emsji
 
 (Alpha x Procent^2 + Beta x Procent + Gamma + (Delta/Procent)/
 (Epsilon x Procent^2 + Zita x Procent + Hta) x (1-Reduction)
-
-Wartości domyślne funkcji
 }
