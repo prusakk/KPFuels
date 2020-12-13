@@ -8,6 +8,9 @@
 #'
 #' @return dataframe
 #'
+#' @import dplyr
+#' @export
+#'
 #' @details Wzór wykorzystywany do obliczenia emsji
 #'
 #' (Alpha x Procent^2 + Beta x Procent + Gamma + (Delta/Procent)/
@@ -21,17 +24,15 @@
 #' @param mode =    ""
 #' @param substancja =    "CO"
 #'
+#'\dontrun{
 #' @examples
 #' Obliczanie emisji dla wartości domyślych
 #'
-#' \dontrun{
 #' emisja()
 #'
 #' emisja(input, 'Heavy Duty Trucks', 'Euro IV', '', 'NOx')
 #'}
-#' @import dplyr
-#' @export
-#'
+
 
 emisja <- function(dane = input,
                    kategoria = "Passanger Cars",

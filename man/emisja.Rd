@@ -21,7 +21,7 @@ emisja(
 
 \item{mode}{=    ""}
 
-\item{substancja}{=    "CO"}
+\item{substancja}{character - nazwa substacji emisyjnej np. CH4, N2O}
 }
 \value{
 dataframe
