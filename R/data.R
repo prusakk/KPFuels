@@ -1,4 +1,3 @@
-
 #' Wskazniki emisji transportu drogowego EEA
 #'
 #' @source Europejska Agencja Środowiska \url{https://www.eea.europa.eu/themes/air/air-pollution-sources-1/emep-eea-air-pollutant-emission-inventory-guidebook}
