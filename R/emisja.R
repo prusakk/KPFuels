@@ -15,11 +15,11 @@
 #'
 #' Wartości domyślne funkcji
 #'
-#' @param dane = input
-#' @param kategoria = "Passanger Cars"
-#' @param euro = "Euro IV"
-#' @param mode = ""
-#' @param substancja = "CO"
+#' @param dane =    input
+#' @param kategoria =    "Passanger Cars"
+#' @param euro =    "Euro IV"
+#' @param mode =    ""
+#' @param substancja =    "CO"
 #'
 #' @examples
 #' Obliczanie emisji dla wartości domyślych
