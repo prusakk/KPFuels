@@ -4,10 +4,12 @@
 \alias{emisja_plot}
 \title{Funkcja wykonuje wykres na podstawie danych wynikowych z funkcji "emisja"}
 \usage{
-emisja_plot(data)
+emisja_plot(data, typ)
 }
 \arguments{
 \item{data}{- dataframe, dane wynikowe funckji "emisja"}
+
+\item{typ}{- character, typ rysowanego wykresy "bar" lub "scatter"}
 }
 \value{
 plot

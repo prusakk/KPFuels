@@ -3,13 +3,23 @@
 #' Argumenty funkcji:
 #'
 #' @param data - dataframe, dane wynikowe funckji "emisja"
+#' @param typ - character, typ rysowanego wykresy "bar" lub "scatter"
 #' @return plot
 #'
 #' @import plotly
 #' @export
 
-emisja_plot <- function(data)
+emisja_plot <- function(data, typ)
 {
-  plot <- plot_ly(data, x = ~Nat, y = ~Emisja, color = ~Segment, colors = "Set1", mode = "markers", type = "scatter")
+  switch(typ,
+         "bar" = {
+           plot <- plot_ly(data, x = ~Euro.Standard, y = ~Emisja, color = ~Segment, colors = "Set1",
+                           type = "bar") -> plot
+         },
+
+         "scatter" = {
+           plot <- plot_ly(data, x = ~Euro.Standard, y = ~Emisja, color = ~Segment, colors = "Set1", mode = "markers", type = "scatter")
+         }
+  )
   return(plot)
 }

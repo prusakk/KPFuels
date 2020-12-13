@@ -1,0 +1,128 @@
+---
+title: "Pakiet KPFuels"
+subtitle: "Obliczanie emisji zanieczyszczeń sliników spalinowych"
+author: "Krzysztof Prusak"
+output: rmarkdown::html_vignette
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+vignette: >
+  %\VignetteIndexEntry{my-vignette}
+  %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
+editor_options: 
+  chunk_output_type: console
+---
+
+<script>
+   $(document).ready(function() {
+     $head = $('#header');
+   });
+</script>
+
+<style type="text/css"> 
+body { font-size: 14px; text-align: justify ; color: black} code.r{ font-size: 14px;} pre { font-size: 14px} 
+h1   { font-size: 24px;} h2 { font-size: 22px;} h3 { font-size: 20px;} 
+</style>
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+```{r message=FALSE, warning=FALSE, include=FALSE}
+library(KPFuels)
+library(dplyr)
+library(plotly)
+library(DT)
+```
+
+
+***Krzyszof Prusak***
+
+***AGH*** Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie,
+
+***Wydział*** Geodezji Górniczej i Inżynerii Środowiska
+
+***Kierunek*** Geoinformacja
+
+***Rok*** 3.
+
+***Przedmiot*** Metody Inwentaryzacji i Szacowania Emisji 
+
+
+# 1. Wstęp
+
+
+Pakiet utworzony w ramach przedmiotu Metody Inwentaryzacji i Szacowania Emisji w roku akademickim 2020/2021.
+Pakiet służy do obliczania emisji zanieczyszczeń generowanych przed pojazdy z silnikami spalinowymi oraz do wyświatlania wyników emisji na wykresie. Plik źródłowy z danymi został pobrany ze strony Europejskiej Agencji Środowisak `EEA`. Został o wstępnie przetworzony na etapie projektowania pakietu i zapisany do danych przesłanych wraz z pakietem. Obiekty załączone w pakiecie to `wskazniki` oraz `input`.
+
+
+# 2. KPFuels
+
+## 2.1. Instalacja pakietu
+
+
+Repozytorium pakietu znajduje się na portalu [github](https://github.com/prusakk/KPFuels).
+
+Do pobrania i instalacji pakietu potrzebne jest zainstalowanie pakietu `devtools`.
+
+```{r eval=TRUE, message=FALSE, warning=FALSE, include=TRUE}
+if(!require(devtools)) {install.packages("devtools"); require(devtools)}
+```
+
+Instalacja pakietu KPFuels
+
+```{r eval=FALSE, include=TRUE}
+devtools::install_github("prusakk/KPFuels", force = T)
+library(KPFuels)
+```
+
+Wywołanie ogólnych informacji na temat pakietu
+
+```{r include=TRUE}
+help(package = "KPFuels")
+```
+
+Załadowanie wymaganych pakietów dodatkowych
+
+```{r eval=FALSE, include=TRUE}
+library(dplyr)
+library(plotly)
+```
+
+## 2.2. Dane wejściowe
+
+Obiekt `input` do dane wejściowe funkcji `emisja()`
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+datatable(input)
+```
+
+
+Obiekt `wskazniki` to dane do których odwołuje się funkcja `emisja()` w trakcie swojego działania. 
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+datatable(wskazniki)
+```
+
+## 2.3. Funkcje pakietu
+
+Podstawową funkcją pakietu jest funkcja licząca emisję zanieczyszczeń `emisja()`
+
+Domyslnie funkcja ta liczy wartości emisji dla argumentów wejściowych:
+
+```{r}
+wynik <- emisja(dane = input,
+                kategoria = "Passenger Cars",
+                euro = "Euro 4",
+                mode = "",
+                substancja = "CO")
+```
+
+```{r echo=FALSE}
+datatable(wynik)
+```
+
+Druga funkcja - `emisja_plot()` - zawarta w pakiecie to funkcja generująca wykres przy pomocy pakietu `plotly`

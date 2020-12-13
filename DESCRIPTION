@@ -13,3 +13,7 @@ RoxygenNote: 7.1.1
 Imports:
     dplyr,
     plotly
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
