@@ -13,17 +13,15 @@ emisja(
 )
 }
 \arguments{
-\item{dane}{= input}
+\item{dane}{=    input}
 
-\item{kategoria}{= "Passanger Cars"}
+\item{kategoria}{=    "Passanger Cars"}
 
-\item{euro}{= "Euro IV"}
+\item{euro}{=    "Euro IV"}
 
-\item{mode}{= ""}
+\item{mode}{=    ""}
 
-\item{substancja}{character - nazwa substacji emisyjnej np. CH4, N2O}
-
-\item{Pollutant}{= "CO"}
+\item{substancja}{=    "CO"}
 }
 \value{
 dataframe
