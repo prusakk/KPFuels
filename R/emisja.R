@@ -28,10 +28,10 @@
 #' emisja()
 #'
 #' emisja(input, 'Heavy Duty Trucks', 'Euro IV', '', 'NOx')
-#'
+#'}
 #' @import dplyr
 #' @export
-#' }
+#'
 
 emisja <- function(dane = input,
                    kategoria = "Passanger Cars",
