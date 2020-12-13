@@ -4,7 +4,8 @@ Title: Obliczanie emisji i rysowanie wykresów
 Version: 0.1.0
 Author: Krzysztof Prusak <prusakk@student.agh.edu.pl>
 Maintainer: Krzysztof Prusak <prusakk@student.agh.edu.pl>
-Description: Oblcizanie i rysowanie wykresu dla emisji zanieczyszczeń pojazdóW spalinowych
+Description: Oblcizanie i rysowanie wykresu dla emisji zanieczyszczeń pojazdóW spalinowych.
+  Dane na których wykonywane są obliczane emisję są udostępnianie przez Europesją Agencję Środowiska - EEA.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
