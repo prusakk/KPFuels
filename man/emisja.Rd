@@ -6,7 +6,7 @@
 \usage{
 emisja(
   dane = input,
-  kategoria = "Passanger Cars",
+  kategoria = "Passenger Cars",
   euro = "Euro 4",
   mode = "",
   substancja = "CO"

@@ -17,8 +17,9 @@
 #' (Epsilon x Procent^2 + Zita x Procent + Hta) x (1-Reduction)
 #'
 
+
 emisja <- function(dane = input,
-                   kategoria = "Passanger Cars",
+                   kategoria = "Passenger Cars",
                    euro = "Euro 4",
                    mode = "",
                    substancja = "CO") {
